@@ -1,0 +1,133 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(80, 97, 117, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(96, 167, 151, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(80, 97, 117, 0.95);
+  border-bottom: 1px solid rgba(96, 167, 151, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #60A797 0%, #76BFAC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.desktopMenu {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .desktopMenu {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #60A797 0%, #76BFAC 100%);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #76BFAC;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.mobileMenuButton {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.mobileMenuButton:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  display: block;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  animation: slideDown 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobileMenu .navLink {
+  display: block;
+  padding: 0.75rem 0;
+}

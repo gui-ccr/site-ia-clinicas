@@ -1,0 +1,19 @@
+/* Paleta de Cores Principal */
+:root {
+  --color-primary: #506175;
+  --color-secondary: #60A797;
+  --color-accent: #76BFAC;
+  --color-light: #ECF3F1;
+  --color-white: #FFFFFF;
+  
+  /* Variações */
+  --color-primary-dark: #3d4a59;
+  --color-primary-darker: #2a3440;
+  --color-secondary-light: #6bb3a3;
+  --color-accent-light: #82c9b8;
+  
+  /* Gradientes */
+  --gradient-primary: linear-gradient(90deg, #60A797 0%, #76BFAC 100%);
+  --gradient-secondary: linear-gradient(135deg, #60A797 0%, #76BFAC 100%);
+  --gradient-background: linear-gradient(135deg, #506175 0%, #3d4a59 50%, #2a3440 100%);
+}
