@@ -19,11 +19,11 @@ export const ChatMessage = ({ type, time, children }: ChatMessageProps) => {
   return (
     <div className={`${styles.chatMessage} ${alignment}`}>
       <div className={`${styles.messageBubble} ${bubbleClass}`}>
-        <p className={styles.messageText}>{children}</p>
+        <p className={styles.messageText}>
+          {children}
+          <span className={styles.messageTime}>{time}</span>
+        </p>
       </div>
-      <span className={styles.messageTime}>
-        {time}
-      </span>
     </div>
   );
 };

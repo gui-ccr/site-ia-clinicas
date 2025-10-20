@@ -1,0 +1,364 @@
+/* iPhone Container */
+.iphoneContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  perspective: 1000px;
+}
+
+/* iPhone Frame */
+.iphoneFrame {
+  width: 375px;
+  height: 812px;
+  background: #000;
+  border-radius: 3rem;
+  box-shadow: 
+    0 0 0 14px #1a1a1a,
+    0 0 0 16px #2d2d2d,
+    0 30px 80px rgba(0, 0, 0, 0.8),
+    inset 0 0 3px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: phoneFloat 6s ease-in-out infinite;
+  padding: 0.75rem;
+}
+
+/* Screen Content Container */
+.screenContent {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 2.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@keyframes phoneFloat {
+  0%, 100% {
+    transform: translateY(0) rotateY(-5deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(5deg);
+  }
+}
+
+/* Notch */
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 32px;
+  background: #000;
+  border-radius: 0 0 1.5rem 1.5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.camera {
+  width: 12px;
+  height: 12px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+.speaker {
+  width: 60px;
+  height: 6px;
+  background: #1a1a1a;
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+
+/* Status Bar */
+.statusBar {
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  background: #075E54;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.statusLeft, .statusRight {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.time {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.statusIcon {
+  width: 15px;
+  height: 15px;
+  color: white;
+}
+
+.batteryIcon {
+  width: 24px;
+  height: 15px;
+  color: white;
+}
+
+/* WhatsApp Header */
+.whatsappHeader {
+  background: #075E54;
+  color: white;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: white;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backButton svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contactAvatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.contactName {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.contactStatus {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.375rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.headerButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.headerButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Chat Content */
+.chatContent {
+  flex: 1;
+  background: #ECE5DD url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRUNFNUREIi8+PHBhdGggZD0iTTAgNTBRMjUgMjUgNTAgNTBUMTAwIDUwIiBzdHJva2U9IiNEMUM5QzAiIHN0cm9rZS13aWR0aD0iMC41IiBmaWxsPSJub25lIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+');
+  background-size: 300px 300px;
+  padding: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 0;
+}
+
+/* Scrollbar personalizado para o chat */
+.chatContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatContent::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.chatContent::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* WhatsApp Input */
+.whatsappInput {
+  background: #F0F0F0;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 1px solid #D1D1D1;
+  flex-shrink: 0;
+}
+
+.inputButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+  color: #54656F;
+}
+
+.inputButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.inputButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.inputField {
+  flex: 1;
+  background: white;
+  border-radius: 1.25rem;
+  padding: 0.625rem 1rem;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.inputPlaceholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.sendButton {
+  background: #00A884;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.sendButton svg {
+  width: 22px;
+  height: 22px;
+}
+
+.sendButton:hover {
+  background: #008F6F;
+  transform: scale(1.05);
+}
+
+.sendButton:active {
+  transform: scale(0.95);
+}
+
+/* Home Indicator */
+.homeIndicator {
+  width: 140px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2.5px;
+  margin: 0.75rem auto;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .iphoneFrame {
+    width: 340px;
+    height: 736px;
+    border-radius: 2.5rem;
+  }
+
+  .chatContent {
+    height: calc(736px - 44px - 60px - 68px - 34px);
+  }
+}
+
+@media (max-width: 480px) {
+  .iphoneFrame {
+    width: 100%;
+    max-width: 375px;
+    height: 700px;
+    border-radius: 2rem;
+  }
+
+  .chatContent {
+    height: calc(700px - 44px - 60px - 68px - 34px);
+  }
+
+  .iphoneContainer {
+    padding: 1rem;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { VoiceMessage } from './VoiceMessage';
+import { IPhoneMockup } from './iPhoneMockup';
 import styles from '../../styles/components/Chat.module.css';
 
 interface ChatPreviewProps {
@@ -72,29 +73,31 @@ export const ChatPreview = ({ chatRef }: ChatPreviewProps) => {
 
   return (
     <div ref={chatRef} className={styles.chatPreview}>
-      <div className={styles.chatContainer}>
-        {messages.map((message, index) => {
-          if (!visibleMessages.includes(index)) return null;
+      <IPhoneMockup>
+        <div className={styles.whatsappMessages}>
+          {messages.map((message, index) => {
+            if (!visibleMessages.includes(index)) return null;
+            
+            if (message.type === 'voice') {
+              return <VoiceMessage key={message.id} />;
+            }
+            
+            return (
+              <ChatMessage key={message.id} type={message.type} time={message.time}>
+                {message.content}
+              </ChatMessage>
+            );
+          })}
           
-          if (message.type === 'voice') {
-            return <VoiceMessage key={message.id} />;
-          }
-          
-          return (
-            <ChatMessage key={message.id} type={message.type} time={message.time}>
-              {message.content}
-            </ChatMessage>
-          );
-        })}
-        
-        {isTyping && (
-          <div className={styles.typingIndicator}>
-            <div className={styles.typingDot}></div>
-            <div className={styles.typingDot}></div>
-            <div className={styles.typingDot}></div>
-          </div>
-        )}
-      </div>
+          {isTyping && (
+            <div className={styles.typingIndicator}>
+              <div className={styles.typingDot}></div>
+              <div className={styles.typingDot}></div>
+              <div className={styles.typingDot}></div>
+            </div>
+          )}
+        </div>
+      </IPhoneMockup>
     </div>
   );
 };

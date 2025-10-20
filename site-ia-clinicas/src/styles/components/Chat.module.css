@@ -1,20 +1,12 @@
 .chatPreview {
   flex: 1;
-  max-width: 500px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.chatContainer {
-  background: linear-gradient(135deg, rgba(96, 167, 151, 0.2) 0%, rgba(118, 191, 172, 0.1) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(96, 167, 151, 0.2);
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
+/* Container removido - agora usamos o iPhone mockup */
 
 .chatMessage {
   animation: messageSlideIn 0.5s ease;
@@ -35,43 +27,70 @@
   text-align: right;
 }
 
+.whatsappMessages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
 .messageBubble {
   display: inline-block;
-  padding: 0.75rem 1rem;
-  border-radius: 1rem;
-  max-width: 85%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  max-width: 75%;
   word-wrap: break-word;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .messageBubble.agent {
-  background-color: #ECF3F1;
-  color: #506175;
-  border-bottom-left-radius: 0.25rem;
+  background-color: white;
+  color: #303030;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0;
+  margin-right: auto;
 }
 
 .messageBubble.client {
-  background-color: white;
-  color: #506175;
-  border-bottom-right-radius: 0.25rem;
+  background-color: #DCF8C6;
+  color: #303030;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+  margin-left: auto;
 }
 
 .messageBubble.chatbot {
-  background-color: #76BFAC;
-  color: white;
-  border-bottom-right-radius: 0.25rem;
+  background-color: #DCF8C6;
+  color: #303030;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0;
+  margin-left: auto;
 }
 
 .messageText {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .messageTime {
-  font-size: 0.75rem;
-  color: #9CA3AF;
-  margin-top: 0.25rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  font-size: 0.65rem;
+  color: #667781;
+  opacity: 0.7;
+  white-space: nowrap;
+  margin-left: auto;
+  padding-left: 0.5rem;
 }
 
 .voiceMessage {
@@ -133,18 +152,20 @@
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.75rem 1rem;
-  background-color: #ECF3F1;
-  border-radius: 1rem;
-  border-bottom-left-radius: 0.25rem;
+  padding: 0.625rem 0.875rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  border-bottom-left-radius: 0;
   max-width: 85%;
   animation: messageSlideIn 0.3s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-right: auto;
 }
 
 .typingDot {
   width: 0.5rem;
   height: 0.5rem;
-  background-color: #60A797;
+  background-color: #9E9E9E;
   border-radius: 50%;
   animation: typingBounce 1.4s infinite ease-in-out;
 }
