@@ -5,7 +5,6 @@ export const MobileMenu = () => (
   <div className={styles.mobileMenu}>
     <NavLink href="#sobre">Sobre</NavLink>
     <NavLink href="#funcionalidades">Funcionalidades</NavLink>
-    <NavLink href="#precos">Preços</NavLink>
     <NavLink href="#contato">Contato</NavLink>
   </div>
 );

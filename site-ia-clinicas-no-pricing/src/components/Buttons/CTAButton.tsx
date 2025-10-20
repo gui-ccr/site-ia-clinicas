@@ -5,17 +5,30 @@ interface CTAButtonProps {
   fullWidth?: boolean;
   large?: boolean;
   onClick?: () => void;
+  href?: string;
 }
 
-export const CTAButton = ({ children, fullWidth, large, onClick }: CTAButtonProps) => {
+export const CTAButton = ({ children, fullWidth, large, onClick, href }: CTAButtonProps) => {
   const classNames = [
     styles.ctaButton,
     large && styles.large,
     fullWidth && styles.fullWidth
   ].filter(Boolean).join(' ');
 
+  const handleClick = () => {
+    if (href) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
-    <button onClick={onClick} className={classNames}>
+    <button onClick={handleClick} className={classNames}>
       {children}
     </button>
   );
