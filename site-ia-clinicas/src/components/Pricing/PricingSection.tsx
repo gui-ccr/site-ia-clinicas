@@ -58,7 +58,7 @@ export const PricingSection = () => {
     'Lembretes e notificações',
     'Triagem inteligente de pacientes',
     'Integração com n8n',
-    'Dashboard com relatórios',
+    'Processamento Multimodal',
     'Suporte técnico prioritário',
     'Atualizações contínuas',
     'Treinamento personalizado',
@@ -95,7 +95,11 @@ export const PricingSection = () => {
             <div className={styles.currentPrice}>
               <span className={styles.currency}>R$</span>
               <span className={styles.price}>748</span>
-              <span className={styles.period}>,50/mês</span>
+              <span className={styles.period}>,50</span>
+            </div>
+
+            <div>
+              <span className={styles.period}>Pagamento único</span>
             </div>
 
             <div className={styles.discount}>

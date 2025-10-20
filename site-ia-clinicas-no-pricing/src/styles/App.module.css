@@ -1,0 +1,26 @@
+.appContainer {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #506175 0%, #3d4a59 50%, #2a3440 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #506175;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #60A797 0%, #76BFAC 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6bb3a3 0%, #82c9b8 100%);
+}
