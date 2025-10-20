@@ -3,7 +3,7 @@ import styles from '../../styles/components/Hero.module.css';
 
 export const Title = forwardRef<HTMLHeadingElement>((_, ref) => (
   <h1 ref={ref} className={styles.title}>
-    Automatize o{' '}
+    Transforme o{' '}
     <span className={styles.titleGradient}>
       atendimento
     </span>{' '}
