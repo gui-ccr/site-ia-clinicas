@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CTAButton } from '../Buttons/CTAButton';
@@ -6,10 +6,51 @@ import styles from '../../styles/components/Pricing.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 export const PricingSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Função que será chamada quando o usuário clicar em "Comprar Agora"
+  const handleCheckout = async () => {
+    try {
+      setIsLoading(true);
+      // 1. Fazer a requisição para o NOSSO backend.
+    const response = await fetch('http://localhost:4242/create-checkout-session', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      // Como o preço e o produto já estão no backend, podemos enviar um corpo vazio
+      body: JSON.stringify({}), 
+    });
+
+    if (!response.ok) {
+      // Se a resposta do nosso servidor não for OK, mostramos um erro.
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Falha ao criar a sessão de checkout.');
+    }
+
+    // 2. Pegar a resposta do backend, que contém a URL de pagamento do Stripe
+    const session = await response.json();
+
+    // 3. Redirecionar o usuário para a página de pagamento do Stripe
+    if (session.url) {
+      window.location.href = session.url;
+    }
+
+  } catch (error) {
+    console.error("Erro no checkout:", error);
+    // Aqui você pode mostrar uma mensagem de erro mais amigável para o usuário
+    alert("Não foi possível iniciar o pagamento. Por favor, tente novamente.");
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -120,8 +161,13 @@ export const PricingSection = () => {
           </div>
 
           <div className={styles.ctaWrapper}>
-            <CTAButton large fullWidth>
-              Começar agora →
+            <CTAButton
+             large
+            fullWidth
+            onClick={handleCheckout}
+            disabled={isLoading}
+            >
+              {isLoading ? 'Processando...' : 'Começar agora →'}
             </CTAButton>
           </div>
 

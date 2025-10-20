@@ -33,3 +33,17 @@
 .ctaButton.fullWidth {
   width: 100%;
 }
+
+.ctaButton.disabled,
+.ctaButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ctaButton.disabled:hover,
+.ctaButton:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
