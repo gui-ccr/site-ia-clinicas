@@ -10,7 +10,7 @@ export const Success = () => {
 
   const handleContactSupport = () => {
     const number = "5561996563486";
-    const message = "Olá! Acabei de adquirir o ClinicAI e preciso de ajuda.";
+    const message = "Olá! Acabei de adquirir o ClinicFlow e preciso de ajuda.";
     const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
@@ -42,7 +42,7 @@ export const Success = () => {
         <h1 className={styles.title}>🎉 Pagamento Confirmado!</h1>
 
         <p className={styles.subtitle}>
-          Obrigado por escolher a <strong>ClinicAI</strong>
+          Obrigado por escolher a <strong>ClinicFlow</strong>
         </p>
 
         <div className={styles.messageBox}>
