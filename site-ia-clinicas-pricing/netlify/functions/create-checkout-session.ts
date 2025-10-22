@@ -5,6 +5,10 @@ const stripeSecretKey = process.env.STRIPE_SECRET_KEY!;
 const stripe = new Stripe(stripeSecretKey);
 
 const handler: Handler = async (event: HandlerEvent, _context: HandlerContext) => {
+
+  console.log('--- Iniciando a função create-checkout-session ---');
+  console.log('A chave secreta do Stripe que a função está vendo é:', process.env.STRIPE_SECRET_KEY);
+
   // Garantir que a requisição é um POST
   if (event.httpMethod !== 'POST') {
     return {
@@ -13,7 +17,7 @@ const handler: Handler = async (event: HandlerEvent, _context: HandlerContext) =
     };
   }
   
-  try {
+try {
     const produto = {
       nome: "Sistema de IA (N8N) para Clínicas",
       preco_em_centavos: 74850,
@@ -23,9 +27,17 @@ const handler: Handler = async (event: HandlerEvent, _context: HandlerContext) =
     const successUrl = `${siteUrl}/sucesso`;
     const cancelUrl = `${siteUrl}/`;
 
-    const session = await stripe.checkout.sessions.create({
+    // ✅ PASSO 1: Declare a variável com o tipo OFICIAL do Stripe
+    const sessionData: Stripe.Checkout.SessionCreateParams = {
       payment_method_types: ["card", "boleto"],
-      mode: "payment",
+      mode: "payment", // Agora o TypeScript sabe que este "payment" é válido!
+      payment_method_options: {
+        card: {
+          installments: {
+            enabled: true,
+          },
+        },
+      },
       line_items: [
         {
           price_data: {
@@ -40,7 +52,13 @@ const handler: Handler = async (event: HandlerEvent, _context: HandlerContext) =
       ],
       success_url: successUrl,
       cancel_url: cancelUrl,
-    });
+    };
+
+    // 2. MOSTRE OS DADOS PARA DEPURAR
+    console.log('Enviando para o Stripe:', JSON.stringify(sessionData, null, 2));
+
+    // 3. USE OS DADOS NA CHAMADA PARA O STRIPE
+    const session = await stripe.checkout.sessions.create(sessionData);
 
     // Envia a resposta de sucesso
     return {
