@@ -1,0 +1,35 @@
+import styles from '../../styles/components/Button.module.css';
+
+interface CTAButtonProps {
+  children: React.ReactNode;
+  fullWidth?: boolean;
+  large?: boolean;
+  onClick?: () => void;
+  href?: string;
+}
+
+export const CTAButton = ({ children, fullWidth, large, onClick, href }: CTAButtonProps) => {
+  const classNames = [
+    styles.ctaButton,
+    large && styles.large,
+    fullWidth && styles.fullWidth
+  ].filter(Boolean).join(' ');
+
+  const handleClick = () => {
+    if (href) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    if (onClick) {
+      onClick();
+    }
+  };
+
+  return (
+    <button onClick={handleClick} className={classNames}>
+      {children}
+    </button>
+  );
+};

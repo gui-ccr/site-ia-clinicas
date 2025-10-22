@@ -51,8 +51,7 @@ export const ContactSection = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    // Substitua pelo seu número de WhatsApp (formato: 5511999999999)
-    const phoneNumber = '5511999999999';
+    const phoneNumber = '5561996563486';
     const message = encodeURIComponent(
       'Olá! Gostaria de saber mais sobre o ClinicAI para automatizar o atendimento da minha clínica.'
     );
