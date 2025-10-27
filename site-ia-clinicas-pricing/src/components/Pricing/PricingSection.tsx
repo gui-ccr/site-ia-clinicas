@@ -17,16 +17,15 @@ export const PricingSection = () => {
 
   // Função que será chamada quando o usuário clicar em "Comprar Agora"
   const handleCheckout = async () => {
+    setIsLoading(true);
     try {
-      setIsLoading(true);
       // 1. Fazer a requisição para o NOSSO backend.
-    const response = await fetch('http://localhost:4242/create-checkout-session', {
+    const response = await fetch('/api/create-checkout-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        body: JSON.stringify({}), 
       },
-      // Como o preço e o produto já estão no backend, podemos enviar um corpo vazio
-      body: JSON.stringify({}), 
     });
 
     if (!response.ok) {
