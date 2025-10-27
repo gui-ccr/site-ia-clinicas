@@ -1,11 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-<<<<<<< HEAD
 import styles from "../styles/components/HeroSection2.module.css";
-=======
-import styles from "../../styles/components/HeroSection2.module.css";
->>>>>>> 55793e40181a619f7f7834be4bde377be36e1d08
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,11 +65,6 @@ export const HeroSection2 = () => {
         </p>
       </div>
     </section>
-<<<<<<< HEAD
     
   );
 };
-=======
-  );
-};
->>>>>>> 55793e40181a619f7f7834be4bde377be36e1d08
