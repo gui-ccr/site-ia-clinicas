@@ -65,5 +65,6 @@ export const HeroSection2 = () => {
         </p>
       </div>
     </section>
+    
   );
 };
