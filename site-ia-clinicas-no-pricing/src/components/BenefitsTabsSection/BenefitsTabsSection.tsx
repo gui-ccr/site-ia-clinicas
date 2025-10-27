@@ -134,7 +134,7 @@ export const BenefitsTabsSection = () => {
       <div className={styles.container}>
         <h2 ref={titleRef} className={styles.title}>
           O que acontece nos primeiros 30 dias com o {" "}
-          <span className={styles.highlight}>ClinicFlow</span>
+          <span className={styles.highlight}>ClinicaFlow</span>
         </h2>
 
         <p className={styles.subtitle}>
