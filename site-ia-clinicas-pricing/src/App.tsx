@@ -9,6 +9,9 @@ import { Footer } from './components/layout/Footer';
 import { HeroSection2} from './components/HeroSection2/HeroSection2';
 import { DecorativeElements } from './components/layout/DecorativeElements';
 import { Success } from './pages/Success';
+import { ObjectionSection } from './components/ObjectSection/ObjectSection';
+import { BenefitsTabsSection } from './components/BenefitsTabsSection/BenefitsTabsSection';
+import { HeroSection2 } from './components/HeroSection2/HeroSection2';
 import styles from './styles/App.module.css';
 
 function LandingPage() {
@@ -19,6 +22,8 @@ function LandingPage() {
       <AboutSection />
       <HeroSection2 />
       <FeaturesSection />
+      <ObjectionSection />
+      <BenefitsTabsSection />
       <PricingSection />
       <ContactSection />
       <Footer />
