@@ -7,7 +7,7 @@ import { Footer } from './components/layout/Footer';
 import { DecorativeElements } from './components/layout/DecorativeElements';
 import { ObjectionSection } from './components/ObjectSection/ObjectSection';
 import { BenefitsTabsSection } from './components/BenefitsTabsSection/BenefitsTabsSection';
-import { HeroSection2 } from './components/HeroSection2/HeroSection2';
+import { HeroSection2 } from './components/HeroSection2/HeroSection2'
 import styles from './components/styles/App.module.css';
 
 export default function LandingPage() {
