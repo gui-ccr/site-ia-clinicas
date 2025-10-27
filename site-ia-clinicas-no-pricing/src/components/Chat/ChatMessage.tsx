@@ -1,4 +1,4 @@
-import styles from '../../styles/components/Chat.module.css';
+import styles from '../styles/components/Chat.module.css';
 
 interface ChatMessageProps {
   type: 'agent' | 'client' | 'chatbot';

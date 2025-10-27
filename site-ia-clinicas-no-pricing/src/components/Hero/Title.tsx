@@ -1,12 +1,12 @@
 import { forwardRef } from 'react';
-import styles from '../../styles/components/Hero.module.css';
+import styles from '../styles/components/Hero.module.css';
 
 export const Title = forwardRef<HTMLHeadingElement>((_, ref) => (
   <h1 ref={ref} className={styles.title}>
-    Transforme o{' '}
+    Sua Clínica {' '}
     <span className={styles.titleGradient}>
-      atendimento
+      crescendo
     </span>{' '}
-    da sua clínica com IA
+    enquanto você descansa
   </h1>
 ));

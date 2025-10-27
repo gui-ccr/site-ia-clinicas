@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import styles from '../../styles/components/About.module.css';
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import styles from "../styles/components/About.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,15 +22,15 @@ export const AboutSection = () => {
           duration: 1,
           scrollTrigger: {
             trigger: titleRef.current,
-            start: 'top 80%',
-            end: 'top 50%',
+            start: "top 80%",
+            end: "top 50%",
             scrub: 1,
           },
         }
       );
 
       // Animação dos cards
-      const cards = cardsRef.current?.querySelectorAll('.about-card');
+      const cards = cardsRef.current?.querySelectorAll(".about-card");
       if (cards) {
         gsap.fromTo(
           cards,
@@ -42,8 +42,8 @@ export const AboutSection = () => {
             stagger: 0.2,
             scrollTrigger: {
               trigger: cardsRef.current,
-              start: 'top 80%',
-              end: 'top 50%',
+              start: "top 80%",
+              end: "top 50%",
               scrub: 1,
             },
           }
@@ -58,14 +58,13 @@ export const AboutSection = () => {
     <section id="sobre" ref={sectionRef} className={styles.aboutSection}>
       <div className={styles.container}>
         <h2 ref={titleRef} className={styles.title}>
-          Transforme o atendimento da sua{' '}
-          <span className={styles.highlight}>clínica médica</span>
+          Tudo Que Você Precisa Para Sua Clínica Funcionar no
+          <span className={styles.highlight}> Automático</span>
         </h2>
 
         <p className={styles.description}>
-          O ClinicAI é uma solução de inteligência artificial desenvolvida especialmente para 
-          automatizar e otimizar o atendimento em clínicas médicas, usando n8n e tecnologia 
-          de ponta para proporcionar experiências excepcionais aos seus pacientes.
+          Sistema completo, pronto para usar. Configure uma vez, funciona para
+          sempre
         </p>
 
         <div ref={cardsRef} className={styles.cardsGrid}>
@@ -73,32 +72,90 @@ export const AboutSection = () => {
             <div className={styles.iconWrapper}>
               <span className={styles.icon}>🤖</span>
             </div>
-            <h3 className={styles.cardTitle}>Atendimento Inteligente</h3>
+            <h3 className={styles.cardTitle}>
+              Assistente Virtual com IA Treinada Para Saúde
+            </h3>
             <p className={styles.cardText}>
-              Agentes de IA treinados especificamente para o contexto médico, 
-              respondendo dúvidas e agendando consultas com precisão.
+              Não é chatbot genérico — é treinada especificamente para saúde.
+              Sabe diferenciar urgência de rotina, faz triagem inicial sem
+              diagnóstico e transfere para humano quando necessário.
             </p>
           </div>
 
           <div className={`${styles.card} about-card`}>
             <div className={styles.iconWrapper}>
-              <span className={styles.icon}>⚡</span>
+              <span className={styles.icon}>📅</span>
             </div>
-            <h3 className={styles.cardTitle}>Automação com n8n</h3>
+            <h3 className={styles.cardTitle}>
+              Agendamento Inteligente Integrado
+            </h3>
             <p className={styles.cardText}>
-              Workflows automatizados que integram com seu sistema atual, 
-              agilizando processos e reduzindo tempo de resposta.
+              Integra com sua agenda atual sem bagunçar nada. Detecta conflitos
+              automaticamente, sugere melhor horário para cada paciente e
+              preenche dados cadastrais sozinha. Funciona até quando seu sistema
+              de gestão cai..
             </p>
           </div>
 
+          <div className={`${styles.card} about-card`}>
+            <div className={styles.iconWrapper}>
+              <span className={styles.icon}>📊</span>
+            </div>
+            <h3 className={styles.cardTitle}>
+              Dashboard de Gestão em Tempo Real
+            </h3>
+            <p className={styles.cardText}>
+              Acompanhe agendamentos, taxa de conversão, horários de pico e performance da IA. Veja quantos pacientes foram atendidos, quantos agendaram e quanto tempo sua equipe economizou.
+            </p>
+          </div>
+
+          <div className={`${styles.card} about-card`}>
+            <div className={styles.iconWrapper}>
+              <span className={styles.icon}>👥</span>
+            </div>
+            <h3 className={styles.cardTitle}>
+              Treinamento Completo da Sua Equipe
+            </h3>
+            <p className={styles.cardText}>
+              Onboarding guiado em vídeo + suporte via WhatsApp. Sua equipe aprende a usar em 15 minutos. Sem complicação técnica.
+            </p>
+          </div>
+
+          <div className={`${styles.card} about-card`}>
+            <div className={styles.iconWrapper}>
+              <span className={styles.icon}>🔄 </span>
+            </div>
+            <h3 className={styles.cardTitle}>
+              Atualizações Automáticas e Suporte Prioritário
+            </h3>
+            <p className={styles.cardText}>
+              Novas funcionalidades chegam automaticamente sem você pagar nada a mais. Suporte em português, por pessoas reais, sempre que você precisar
+            </p>
+          </div>
+          
           <div className={`${styles.card} about-card`}>
             <div className={styles.iconWrapper}>
               <span className={styles.icon}>💬</span>
             </div>
-            <h3 className={styles.cardTitle}>WhatsApp 24/7</h3>
+            <h3 className={styles.cardTitle}>
+              Atendimento Omnichannel (WhatsApp + Instagram + Facebook)
+            </h3>
             <p className={styles.cardText}>
-              Atendimento ininterrupto pelo WhatsApp, o canal preferido dos 
-              pacientes, disponível a qualquer hora do dia ou da noite.
+              Centraliza todas as mensagens em um único lugar. Responde automaticamente onde quer que o paciente te procure, sem você precisar ficar alternando entre apps.
+            </p>
+          </div>
+
+          <div className={`${styles.card} about-card`}>
+            <div className={styles.iconWrapper}>
+              <span className={styles.icon}>🔔</span>
+            </div>
+            <h3 className={styles.cardTitle}>
+              Sistema Anti-Falta (Confirmações + Lembretes)
+            </h3>
+            <p className={styles.cardText}>
+              Envia confirmações 48h antes e lembretes no dia da consulta
+              automaticamente. Se o paciente precisa remarcar, a IA já oferece
+              novos horários na hora. Reduz no-show em até 60%.
             </p>
           </div>
         </div>

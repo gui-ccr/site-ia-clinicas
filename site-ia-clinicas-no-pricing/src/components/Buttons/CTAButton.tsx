@@ -1,4 +1,4 @@
-import styles from '../../styles/components/Button.module.css';
+import styles from '../styles/components/Button.module.css';
 
 interface CTAButtonProps {
   children: React.ReactNode;
@@ -6,13 +6,15 @@ interface CTAButtonProps {
   large?: boolean;
   onClick?: () => void;
   href?: string;
+  disabled?: boolean;
 }
 
-export const CTAButton = ({ children, fullWidth, large, onClick, href }: CTAButtonProps) => {
+export const CTAButton = ({ children, fullWidth, large, onClick, href, disabled }: CTAButtonProps) => {
   const classNames = [
     styles.ctaButton,
     large && styles.large,
-    fullWidth && styles.fullWidth
+    fullWidth && styles.fullWidth,
+    disabled && styles.disabled
   ].filter(Boolean).join(' ');
 
   const handleClick = () => {

@@ -1,4 +1,4 @@
-import styles from '../../styles/components/Hero.module.css';
+import styles from '../styles/components/Hero.module.css';
 
 export const Badge = () => (
   <div className={styles.badge}>

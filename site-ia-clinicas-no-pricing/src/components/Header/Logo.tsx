@@ -1,4 +1,4 @@
-import styles from '../../styles/components/Header.module.css';
+import styles from '../styles/components/Header.module.css';
 
 export const Logo = () => {
   const scrollToTop = () => {
@@ -14,7 +14,7 @@ export const Logo = () => {
       onClick={scrollToTop}
       aria-label="Voltar ao topo"
     >
-      ClinicAI
+      ClinicFlow
     </button>
   );
 };
