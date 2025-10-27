@@ -62,12 +62,13 @@ export const ContactSection = () => {
     <section id="contato" ref={sectionRef} className={styles.contactSection}>
       <div className={styles.container}>
         <h2 ref={titleRef} className={styles.title}>
-          Pronto para{' '}
-          <span className={styles.highlight}>transformar</span> sua clínica?
+          Sua agenda lotada e seus fins de semana livres estão a uma conversa de{' '}
+          <span className={styles.highlight}>distância</span>
         </h2>
 
         <p className={styles.subtitle}>
-          Fale com nossos especialistas e descubra como a IA pode revolucionar seu atendimento
+          Chega de perder dinheiro, tempo e paz de espírito.
+
         </p>
 
         <div ref={cardRef} className={styles.contactCard}>
@@ -84,7 +85,7 @@ export const ContactSection = () => {
           <h3 className={styles.cardTitle}>Fale conosco pelo WhatsApp</h3>
           
           <p className={styles.cardDescription}>
-            Nossa equipe está pronta para responder suas dúvidas e apresentar a melhor solução para sua clínica.
+            sem compromisso, e veja em 5 minutos como o ClinicFlow pode começar a transformar sua clínica a partir de amanhã.
           </p>
 
           <button onClick={handleWhatsAppClick} className={styles.whatsappButton}>

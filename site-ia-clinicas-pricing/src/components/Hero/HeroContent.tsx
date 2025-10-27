@@ -16,7 +16,7 @@ export const HeroContent = ({ titleRef, subtitleRef, buttonRef }: HeroContentPro
     <Title ref={titleRef} />
     <Subtitle ref={subtitleRef} />
     <div ref={buttonRef}>
-      <CTAButton large href="#contato">Automatize sua clínica →</CTAButton>
+      <CTAButton large href="#contato">Automatizar minha clinica →</CTAButton>
     </div>
   </div>
 );
