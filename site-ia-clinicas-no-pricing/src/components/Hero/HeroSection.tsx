@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { HeroContent } from './HeroContent';
 import { ChatPreview } from '../Chat/ChatPreview';
-import styles from '../../styles/components/Hero.module.css';
+import styles from '../styles/components/Hero.module.css';
 
 export const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);

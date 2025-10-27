@@ -1,5 +1,5 @@
 import { NavLink } from './NavLink';
-import styles from '../../styles/components/Header.module.css';
+import styles from '../styles/components/Header.module.css';
 
 export const DesktopMenu = () => (
   <div className={styles.desktopMenu}>

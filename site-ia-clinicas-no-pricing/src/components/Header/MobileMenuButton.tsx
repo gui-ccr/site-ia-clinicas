@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react';
-import styles from '../../styles/components/Header.module.css';
+import styles from '../styles/components/Header.module.css';
 
 interface MobileMenuButtonProps {
   isOpen: boolean;

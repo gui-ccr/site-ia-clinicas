@@ -1,11 +1,20 @@
-# netlify.toml
+ # netlify.toml
 
+# Configurações de Build
 [build]
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
 
+# REGRA 1: Para as chamadas de API (já estava correta)
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
+  status = 200
+
+# REGRA 2: A regra "pega-tudo" para o seu site React (SPA)
+# Esta deve ser a última regra de redirecionamento.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
   status = 200

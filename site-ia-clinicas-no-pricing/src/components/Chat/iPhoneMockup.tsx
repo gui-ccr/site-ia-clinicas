@@ -1,4 +1,4 @@
-import styles from '../../styles/components/iPhoneMockup.module.css';
+import styles from '../styles/components/iPhoneMockup.module.css';
 
 interface IPhoneMockupProps {
   children: React.ReactNode;

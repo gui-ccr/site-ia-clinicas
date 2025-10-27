@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChatMessage } from './ChatMessage';
 import { VoiceMessage } from './VoiceMessage';
 import { IPhoneMockup } from './iPhoneMockup';
-import styles from '../../styles/components/Chat.module.css';
+import styles from '../styles/components/Chat.module.css';
 
 interface ChatPreviewProps {
   chatRef: React.RefObject<HTMLDivElement | null>;

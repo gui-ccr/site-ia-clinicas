@@ -3,7 +3,7 @@ import { Logo } from './Logo';
 import { DesktopMenu } from './DesktopMenu';
 import { MobileMenuButton } from './MobileMenuButton';
 import { MobileMenu } from './MobileMenu';
-import styles from '../../styles/components/Header.module.css';
+import styles from '../styles/components/Header.module.css';
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -1,4 +1,4 @@
-import styles from '../../styles/components/Decorative.module.css';
+import styles from '../styles/components/Decorative.module.css';
 
 export const DecorativeElements = () => (
   <>
