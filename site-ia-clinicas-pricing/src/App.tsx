@@ -6,6 +6,7 @@ import { FeaturesSection } from './components/Features/FeaturesSection';
 import { PricingSection } from './components/Pricing/PricingSection';
 import { ContactSection } from './components/Contact/ContactSection';
 import { Footer } from './components/layout/Footer';
+import { HeroSection2} from './components/HeroSection2/HeroSection2';
 import { DecorativeElements } from './components/layout/DecorativeElements';
 import { Success } from './pages/Success';
 import styles from './styles/App.module.css';
@@ -16,6 +17,7 @@ function LandingPage() {
       <Header />
       <HeroSection />
       <AboutSection />
+      <HeroSection2 />
       <FeaturesSection />
       <PricingSection />
       <ContactSection />
