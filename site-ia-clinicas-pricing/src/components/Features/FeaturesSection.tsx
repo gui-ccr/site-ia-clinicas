@@ -147,7 +147,7 @@ export const FeaturesSection = () => {
     >
       <div className={styles.container}>
         <h2 ref={titleRef} className={styles.title}>
-          O ClinicFlow é para <span className={styles.highlight}>você</span> que
+          O ClinicaFlow é para <span className={styles.highlight}>você</span> que
           quer
         </h2>
       

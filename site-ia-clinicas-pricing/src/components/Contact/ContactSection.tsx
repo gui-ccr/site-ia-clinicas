@@ -51,9 +51,9 @@ export const ContactSection = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '5561996563486';
+    const phoneNumber = '556196301711';
     const message = encodeURIComponent(
-      'Olá! Gostaria de saber mais sobre o ClinicFlow para automatizar o atendimento da minha clínica.'
+      'Olá! Gostaria de saber mais sobre o ClinicaFlow para automatizar o atendimento da minha clínica.'
     );
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
@@ -85,7 +85,7 @@ export const ContactSection = () => {
           <h3 className={styles.cardTitle}>Fale conosco pelo WhatsApp</h3>
           
           <p className={styles.cardDescription}>
-            sem compromisso, e veja em 5 minutos como o ClinicFlow pode começar a transformar sua clínica a partir de amanhã.
+            sem compromisso, e veja em 5 minutos como o ClinicaFlow pode começar a transformar sua clínica a partir de amanhã.
           </p>
 
           <button onClick={handleWhatsAppClick} className={styles.whatsappButton}>
