@@ -14,7 +14,7 @@ export const Logo = () => {
       onClick={scrollToTop}
       aria-label="Voltar ao topo"
     >
-      ClinicFlow
+      ClinicaFlow
     </button>
   );
 };

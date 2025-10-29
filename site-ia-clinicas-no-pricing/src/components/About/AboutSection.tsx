@@ -97,17 +97,6 @@ export const AboutSection = () => {
             </p>
           </div>
 
-          <div className={`${styles.card} about-card`}>
-            <div className={styles.iconWrapper}>
-              <span className={styles.icon}>📊</span>
-            </div>
-            <h3 className={styles.cardTitle}>
-              Dashboard de Gestão em Tempo Real
-            </h3>
-            <p className={styles.cardText}>
-              Acompanhe agendamentos, taxa de conversão, horários de pico e performance da IA. Veja quantos pacientes foram atendidos, quantos agendaram e quanto tempo sua equipe economizou.
-            </p>
-          </div>
 
           <div className={`${styles.card} about-card`}>
             <div className={styles.iconWrapper}>
@@ -133,17 +122,6 @@ export const AboutSection = () => {
             </p>
           </div>
           
-          <div className={`${styles.card} about-card`}>
-            <div className={styles.iconWrapper}>
-              <span className={styles.icon}>💬</span>
-            </div>
-            <h3 className={styles.cardTitle}>
-              Atendimento Omnichannel (WhatsApp + Instagram + Facebook)
-            </h3>
-            <p className={styles.cardText}>
-              Centraliza todas as mensagens em um único lugar. Responde automaticamente onde quer que o paciente te procure, sem você precisar ficar alternando entre apps.
-            </p>
-          </div>
 
           <div className={`${styles.card} about-card`}>
             <div className={styles.iconWrapper}>

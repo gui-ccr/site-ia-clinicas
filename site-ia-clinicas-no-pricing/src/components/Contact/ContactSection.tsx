@@ -85,7 +85,7 @@ export const ContactSection = () => {
           <h3 className={styles.cardTitle}>Fale conosco pelo WhatsApp</h3>
           
           <p className={styles.cardDescription}>
-            sem compromisso, e veja em 5 minutos como o ClinicFlow pode começar a transformar sua clínica a partir de amanhã.
+            sem compromisso, e veja em 5 minutos como o ClinicaFlow pode começar a transformar sua clínica a partir de amanhã.
           </p>
 
           <button onClick={handleWhatsAppClick} className={styles.whatsappButton}>
