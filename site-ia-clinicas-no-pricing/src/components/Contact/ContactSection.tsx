@@ -51,7 +51,7 @@ export const ContactSection = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '556196301711';
+    const phoneNumber = '556192661000';
     const message = encodeURIComponent(
       'Olá! Gostaria de saber mais sobre o ClinicaFlow para automatizar o atendimento da minha clínica.'
     );
